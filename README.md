@@ -5,8 +5,8 @@ This is a modern, user-friendly To-Do List application built to help users manag
 #
 
 
+![App Screenshot](https://i.ibb.co/WWjDHtqL/Screenshot-10-3-2025-11859-127-0-0-1.jpg)
 
-![App Screenshot](https://i.ibb.co.com/WWjDHtqL/Screenshot-10-3-2025-11859-127-0-0-1.jpg)
 # ✨ Features
 
 - ✅ **Add Tasks**: Create new tasks using a modal interface with a simple input field.
