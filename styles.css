@@ -1,0 +1,413 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode .container {
+    background: #2c2c2c;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #6b48ff, #a48bff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .logo-text {
+    background: linear-gradient(90deg, #8a6bff, #b89bff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.1);
+}
+
+.lock-icon {
+    width: 24px;
+    height: 24px;
+    stroke: #6b48ff;
+}
+
+body.dark-mode .lock-icon {
+    stroke: #8a6bff;
+}
+
+.controls select, .controls button {
+    padding: 5px 10px;
+    border: none;
+    background: #6b48ff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+body.dark-mode .controls select, body.dark-mode .controls button {
+    background: #8a6bff;
+}
+
+.search-bar {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+body.dark-mode .search-bar input {
+    background: #3a3a3a;
+    border-color: #555;
+    color: #ffffff;
+}
+
+.search-bar button {
+    padding: 10px;
+    border: none;
+    background: #6b48ff;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+body.dark-mode .search-bar button {
+    background: #8a6bff;
+}
+
+#todo-list {
+    list-style: none;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+body.dark-mode .todo-item {
+    background: #3a3a3a;
+    border-color: #555;
+}
+
+.todo-item input[type="checkbox"] {
+    margin-right: 10px;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #6b48ff;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+body.dark-mode .todo-item input[type="checkbox"] {
+    border-color: #8a6bff;
+}
+
+.todo-item input[type="checkbox"]:checked {
+    background-color: #6b48ff;
+}
+
+body.dark-mode .todo-item input[type="checkbox"]:checked {
+    background-color: #8a6bff;
+}
+
+.todo-item input[type="checkbox"]:checked::after {
+    content: '✔';
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.todo-item label {
+    flex: 1;
+    color: #333;
+}
+
+body.dark-mode .todo-item label {
+    color: #ffffff;
+}
+
+.todo-item.completed label {
+    text-decoration: line-through;
+    color: #888;
+}
+
+body.dark-mode .todo-item.completed label {
+    color: #aaa;
+}
+
+.todo-item .actions {
+    display: flex;
+    gap: 10px;
+}
+
+.todo-item .actions button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.todo-item .actions svg {
+    width: 20px;
+    height: 20px;
+}
+
+.todo-item .actions svg path,
+.todo-item .actions svg line {
+    stroke: #6b48ff;
+}
+
+body.dark-mode .todo-item .actions svg path,
+body.dark-mode .todo-item .actions svg line {
+    stroke: #8a6bff;
+}
+
+.history-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: #555;
+}
+
+body.dark-mode .history-item {
+    background: #444;
+    border-color: #666;
+    color: #ccc;
+}
+
+.history-item .task-text {
+    flex: 1;
+}
+
+.history-item .date {
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+#add-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: #6b48ff;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+body.dark-mode #add-btn {
+    background: #8a6bff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+body.dark-mode .modal {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .modal-content {
+    background: #2c2c2c;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.modal-content h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+body.dark-mode .modal-content h2 {
+    color: #ffffff;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 6rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+body.dark-mode .modal-content input {
+    background: #3a3a3a;
+    border-color: #555;
+    color: #ffffff;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cancel-btn {
+    background: #fff;
+    color: #000000;
+    border: 2px solid #6b48ff;
+}
+
+body.dark-mode #cancel-btn {
+    background: #3a3a3a;
+    color: #ffffff;
+    border-color: #8a6bff;
+}
+
+#apply-btn {
+    background: #6b48ff;
+    color: white;
+}
+
+body.dark-mode #apply-btn {
+    background: #8a6bff;
+}
+
+.confirm-content {
+    padding: 30px;
+}
+
+.modal-content2 {
+    max-width: 400px;
+}
+
+.modal-content2 p {
+    margin-bottom: 1rem;
+}
+
+body.dark-mode .modal-content2 p {
+    color: #ffffff;
+}
+
+#confirm-cancel-btn {
+    background: #fff;
+    color: #000000;
+    border: 2px solid #6b48ff;
+}
+
+body.dark-mode #confirm-cancel-btn {
+    background: #3a3a3a;
+    color: #ffffff;
+    border-color: #8a6bff;
+}
+
+#confirm-delete-btn {
+    background: #6b48ff;
+    color: white;
+}
+
+body.dark-mode #confirm-delete-btn {
+    background: #8a6bff;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    .header .logo {
+        font-size: 20px;
+    }
+    .add-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    .modal-content {
+        width: 80%;
+    }
+}
