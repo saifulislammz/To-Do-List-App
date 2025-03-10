@@ -1,5 +1,5 @@
 
-# To Do List App
+# 📌 To Do List App
 
 This is a modern, user-friendly To-Do List application built to help users manage tasks efficiently. The app allows users to add, edit, and delete tasks, with features like task completion tracking, history view, search functionality, and a dark mode toggle for enhanced usability. The design is clean and responsive, with a focus on simplicity and functionality.
 #
