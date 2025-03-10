@@ -1,13 +1,16 @@
-
-# 📌 To Do List App
+# 📌 To-Do List App
 
 This is a modern, user-friendly To-Do List application built to help users manage tasks efficiently. The app allows users to add, edit, and delete tasks, with features like task completion tracking, history view, search functionality, and a dark mode toggle for enhanced usability. The design is clean and responsive, with a focus on simplicity and functionality.
-#
 
+## 🌍 Live Demo
+
+🔗 **[Try it here!](https://todolist-novara.netlify.app/)**  
+
+## 📸 Screenshot
 
 ![App Screenshot](https://i.ibb.co/WWjDHtqL/Screenshot-10-3-2025-11859-127-0-0-1.jpg)
 
-# ✨ Features
+## ✨ Features
 
 - ✅ **Add Tasks**: Create new tasks using a modal interface with a simple input field.
 - ✏️ **Edit Tasks**: Edit existing tasks directly from the list.
@@ -20,3 +23,5 @@ This is a modern, user-friendly To-Do List application built to help users manag
 - 🎨 **Modern Logo**: "TODO LIST" header features a sleek gradient text style using the Poppins font.
 - 🌟 **Favicon**: Custom favicon for better branding in browser tabs.
 - 💾 **Persistent Storage**: Tasks are stored in `localStorage`, ensuring data remains after page refreshes.
+
+---
