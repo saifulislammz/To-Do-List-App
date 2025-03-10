@@ -4,7 +4,7 @@ This is a modern, user-friendly To-Do List application built to help users manag
 
 ## 🌍 Live Demo
 
-🔗 **[Try it here!](https://todolist-novara.netlify.app/)**  
+🔗 **<a href="https://todolist-novara.netlify.app/" target="_blank" rel="noopener noreferrer">Try it here!</a>** 
 
 ## 📸 Screenshot
 
